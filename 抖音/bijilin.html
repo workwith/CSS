@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .ice-cream{
+            width: 50px;
+            height: 120px;
+            margin: 100px auto;
+        }
+        .body:before{
+            position: absolute;
+            content: '';
+            width: 25px;
+            height: 25px;
+            border: 5px solid #fff;
+            border-right: 5px solid transparent;
+            border-top: 5px solid transparent;
+            border-left: 5px solid transparent;
+            border-radius: 100%;
+            top: 5px;
+            left: 5px;
+            transform:  rotate(120deg);
+            opacity: 0.7;
+            z-index: 10;
+        }
+        .body{
+            margin: 0 auto;
+            width: 50px;
+            height: 100px;
+            border-radius: 30px 30px 10px 10px;
+            background-color: red; 
+            position: relative;
+            overflow: hidden;
+        }
+        .footer{
+            width: 10px;
+            height: 15px;
+            margin: 0 auto;
+            border-radius: 0 0 4px 4px;
+            background-color: #a77b64;
+        }
+        .loading{
+            position: absolute;
+            width: 200px;
+            top: -213px;
+            left: -27px;
+            transform: rotate(45deg);
+            animation: move 2.5s linear infinite;
+        }
+        @keyframes move{
+            from{
+                top:-213px;
+                left: -27px;
+            }
+            to{
+                top:-46px;
+                left: -83px;
+            }
+        }
+        .loading .line{
+            height: 40px;
+        }
+        .loading .line:nth-child(1),
+        .loading .line:nth-child(5){
+            background-color: #ff7632
+        }
+        .loading .line:nth-child(2),
+        .loading .line:nth-child(6){
+            background-color: #46b0ff
+        }
+        .loading .line:nth-child(3),
+        .loading .line:nth-child(7){
+            background-color: #fffce5
+        }
+        .loading .line:nth-child(4),
+        .loading .line:nth-child(8){
+            background-color: red
+        }
+    </style>
+</head>
+<body>
+    <div class="ice-cream">
+        <div class="body">
+            <div class="loading">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>
