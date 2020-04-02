@@ -3,7 +3,7 @@
  * @Autor: 吕殿朝
  * @Date: 2020-04-03 00:30:10
  * @LastEditors: 吕殿朝
- * @LastEditTime: 2020-04-03 00:30:33
+ * @LastEditTime: 2020-04-03 00:43:27
  -->
 <!DOCTYPE html>
 <html lang="en">
@@ -11,8 +11,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>钻石</title>
+  <style>
+    .cut-diamond{
+       border-style: solid;
+       border-color: transparent transparent red transparent;
+       border-width: 0 25px 25px 25px;
+       height: 0;
+       width: 50px;
+       box-sizing: content-box;
+       position: relative;
+       margin: 20px 0 50px 0;
+    }
+    .cut-diamond::after{
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: -25px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-color: red transparent transparent transparent;
+      border-width: 70px 50px 0 50px;
+    }
+  </style>
 </head>
 <body>
-  
+  <div class="cut-diamond">
+
+  </div>
 </body>
 </html>
